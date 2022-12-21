@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="row float-start">
+    <div class="row row-cols-1 float-start">
       <button
         class="btn btn-info mx-4 rounded-0"
         type="button"
@@ -83,6 +83,17 @@
         >
           {{ item.title }}
         </div>
+<!--        <form action="" @click.prevent="AdTask">-->
+<!--          <input-->
+<!--            type="text"-->
+<!--            class="form-control"-->
+<!--            id="floatingInput"-->
+<!--            placeholder="Titel"-->
+<!--            v-model="item.title"-->
+<!--            required-->
+<!--          />-->
+<!--          <button class="btn btn-info">Taak toevoegen</button>-->
+<!--        </form>-->
       </div>
       <div
         class="drop-zone mx-3 col"
@@ -166,6 +177,14 @@ export default {
     };
   },
   methods: {
+    // AdTask() {
+    //   this.item.push({
+    //     Id: this.item.length + 1,
+    //     title: this.title,
+    //     list: 1,
+    //   });
+    //   this.items = "";
+    // },
     startDrag(evt, item) {
       evt.dataTransfer.dropEffect = "move";
       evt.dataTransfer.effectAllowed = "move";
