@@ -12,10 +12,10 @@ export default {
   openForm(context, payload) {
     context.commit("openForm", payload);
   },
-  saveCard(context, payload) {
-    context.commit("saveCard", payload);
+  saveTaak(context, payload) {
+    context.commit("saveTaak", payload);
   },
-  deleteCard(context, payload) {
-    context.commit("deleteCard", payload);
+  deleteTaak(context, payload) {
+    context.commit("deleteTaak", payload);
   },
 };

@@ -9,13 +9,13 @@ export default {
   },
   // taak een id geven
   maakTaak(state, payload) {
-    state.lastCardId++;
-    const card = {
+    state.lastTaakId++;
+    const taak = {
       listId: payload.listId,
-      id: this.lastCardId,
+      id: this.lastTaakId,
       name: payload.name,
     };
-    state.cards.push(card);
+    state.taken.push(taak);
   },
   toggleOverlay(state) {
     state.overlay = !state.overlay;
@@ -24,17 +24,17 @@ export default {
     state.currentData = payload;
   },
   saveCard(state, payload) {
-    state.cards = state.cards.map((card) => {
-      if (card.id === payload.id) {
-        return Object.assign({}, card, payload);
+    state.taak = state.taken.map((taak) => {
+      if (taak.id === payload.id) {
+        return Object.assign({}, taak, payload);
       }
-      return card;
+      return taak;
     });
   },
   deleteCard(state, payload) {
-    const indexToDelete = state.cards
-      .map((card) => card.id)
+    const indexToDelete = state.taken
+      .map((taak) => taak.id)
       .indexOf(payload.id);
-    state.cards.splice(indexToDelete, 1);
+    state.taken.splice(indexToDelete, 1);
   },
 };

@@ -1,16 +1,16 @@
 <template>
   <!--  verslepen van de taken-->
-  <draggable :options="{ group: 'cards' }" group="cards" ghostClass="ghost">
+  <draggable :options="{ group: 'taken' }" group="taken" ghostClass="ghost">
     <!-- taken in de lijst-->
     <!--  togglePopup    modal voor het verwijderen van de taak-->
     <!--      weergave van de taak naam-->
     <span
       class="bg-light p-3 m-2 d-flex"
-      v-for="(card, index) in cards"
+      v-for="(taak, index) in taken"
       :key="index"
-      @click="togglePopup(card)"
+      @click="togglePopup(taak)"
     >
-      {{ card.name }}
+      {{ taak.name }}
     </span>
   </draggable>
 </template>
@@ -37,10 +37,10 @@ export default {
     },
   },
   computed: {
-    cards() {
-      const cardFilteredByListId = this.$store.getters["cards"];
-      return cardFilteredByListId.filter((card) => {
-        if (card.listId === this.listId) {
+    taken() {
+      const taakFilteredByListId = this.$store.getters["taken"];
+      return taakFilteredByListId.filter((taak) => {
+        if (taak.listId === this.listId) {
           return true;
         } else {
           return false;

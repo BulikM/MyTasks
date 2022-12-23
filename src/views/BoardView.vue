@@ -22,7 +22,7 @@
             <!--            rand rond maak taak aan-->
             <div class="bg-pink w-100 d-flex justify-content-center p-2">
               <!--              taak aanmaken via -->
-              <Card :listId="list.id" />
+              <taak :listId="list.id" />
             </div>
           </div>
         </draggable>
@@ -44,7 +44,7 @@ import { VueDraggableNext } from "vue-draggable-next";
 // taak
 import CardsList from "@/components/CardList";
 // invulveld om taak aan te maken
-import Card from "@/components/CardItem.vue";
+import taak from "@/components/MaakTaak.vue";
 
 import Overlay from "@/components/OverLay";
 // modal om de taak aan te passen
@@ -54,7 +54,7 @@ export default {
   components: {
     draggable: VueDraggableNext,
     CardsList,
-    Card,
+    taak,
     Overlay,
     Popup,
   },

@@ -2,14 +2,14 @@ export default {
   lastListId(state) {
     return state.lastListId;
   },
-  lastCardId(state) {
-    return state.lastCardId;
+  lastTaakId(state) {
+    return state.lastTaakId;
   },
   lists(state) {
     return state.lists;
   },
-  cards(state) {
-    return state.cards;
+  taken(state) {
+    return state.taken;
   },
   overlay(state) {
     return state.overlay;

@@ -24,21 +24,21 @@ const store = createStore({
           name: "list #3",
         },
       ],
-      cards: [
+      taken: [
         {
           listId: 1,
           id: 1,
-          name: "card 1",
+          name: "taak 1",
         },
         {
           listId: 2,
           id: 2,
-          name: "card 2",
+          name: "taak 2",
         },
         {
           listId: 3,
           id: 3,
-          name: "card 3",
+          name: "taak 3",
         },
       ],
     };
