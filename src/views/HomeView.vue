@@ -83,17 +83,16 @@
         >
           {{ item.title }}
         </div>
-<!--        <form action="" @click.prevent="AdTask">-->
-<!--          <input-->
-<!--            type="text"-->
-<!--            class="form-control"-->
-<!--            id="floatingInput"-->
-<!--            placeholder="Titel"-->
-<!--            v-model="item.title"-->
-<!--            required-->
-<!--          />-->
-<!--          <button class="btn btn-info">Taak toevoegen</button>-->
-<!--        </form>-->
+        <form action="">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInput"
+            placeholder="Titel"
+            required
+          />
+          <button class="btn btn-info">Taak toevoegen</button>
+        </form>
       </div>
       <div
         class="drop-zone mx-3 col"
