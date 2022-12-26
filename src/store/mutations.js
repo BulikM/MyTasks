@@ -9,11 +9,12 @@ export default {
   },
   // taak een id geven
   maakTaak(state, payload) {
+    // de vorige id +1 voor de nieuwe id
     state.lastTaakId++;
     const taak = {
       listId: payload.listId,
-      id: this.lastTaakId,
-      name: payload.name,
+      id: state.lastTaakId,
+      naam: payload.naam,
     };
     state.taken.push(taak);
   },
@@ -23,15 +24,16 @@ export default {
   openForm(state, payload) {
     state.currentData = payload;
   },
-  saveCard(state, payload) {
-    state.taak = state.taken.map((taak) => {
+  // het opslaan van de aangepaste taaknaam
+  saveTaak(state, payload) {
+    state.taken = state.taken.map((taak) => {
       if (taak.id === payload.id) {
         return Object.assign({}, taak, payload);
       }
       return taak;
     });
   },
-  deleteCard(state, payload) {
+  deleteTaak(state, payload) {
     const indexToDelete = state.taken
       .map((taak) => taak.id)
       .indexOf(payload.id);

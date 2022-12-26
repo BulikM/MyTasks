@@ -3,6 +3,7 @@ export default {
     context.commit("createNewList", payload);
   },
   // nieuwe taak toevoegen
+  // de payload is om het volledige object over te dragen in vue
   maakTaak(context, payload) {
     context.commit("maakTaak", payload);
   },

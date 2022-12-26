@@ -8,7 +8,7 @@ const store = createStore({
     return {
       overlay: false,
       lastListId: 3,
-      lastCardId: 5,
+      lastTaakId: 3,
       currentData: null,
       lists: [
         {
@@ -28,17 +28,17 @@ const store = createStore({
         {
           listId: 1,
           id: 1,
-          name: "taak 1",
+          naam: "taak 1",
         },
         {
           listId: 2,
           id: 2,
-          name: "taak 2",
+          naam: "taak 2",
         },
         {
           listId: 3,
           id: 3,
-          name: "taak 3",
+          naam: "taak 3",
         },
       ],
     };

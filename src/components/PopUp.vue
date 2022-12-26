@@ -2,7 +2,7 @@
   <transition>
     <div v-if="overlay" class="modal">
       <h1>List Name : {{ currentData.listName }}</h1>
-      <input :placeholder="currentData.name" v-model="cardName" />
+      <input :placeholder="currentData.naam" v-model="taakNaam" />
       <div class="container-button">
         <button class="blue" @click="saveElement">save</button>
         <button class="red" @click="deleteElement">delete</button>
@@ -17,28 +17,29 @@ import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      cardName: null,
+      taakNaam: null,
     };
   },
   computed: {
     ...mapGetters(["overlay", "currentData"]),
   },
   methods: {
+    // naam van taak aanpassen
     saveElement() {
-      if (this.cardName === null) {
-        this.cardName = this.currentData.name;
+      if (this.taakNaam === null) {
+        this.taakNaam = this.currentData.naam;
       }
-      const card = {
+      const taak = {
         listId: this.currentData.listId,
         id: this.currentData.id,
-        name: this.cardName,
+        naam: this.taakNaam,
       };
-      this.$store.dispatch("saveCard", card);
-      this.cardName = null;
+      this.$store.dispatch("saveTaak", taak);
+      this.taakNaam = null;
       this.$store.dispatch("toggleOverlay");
     },
     deleteElement() {
-      this.$store.dispatch("deleteCard", this.currentData);
+      this.$store.dispatch("deleteTaak", this.currentData);
       this.$store.dispatch("toggleOverlay");
     },
   },

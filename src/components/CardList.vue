@@ -10,7 +10,7 @@
       :key="index"
       @click="togglePopup(taak)"
     >
-      {{ taak.name }}
+      {{ taak.naam }}
     </span>
   </draggable>
 </template>
@@ -30,7 +30,7 @@ export default {
         listId: this.listId,
         listName: this.listName,
         id: data.id,
-        name: data.name,
+        naam: data.naam,
       };
       this.$store.dispatch("toggleOverlay");
       this.$store.dispatch("openForm", currentData);

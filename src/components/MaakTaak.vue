@@ -20,8 +20,10 @@ export default {
     maakTaak() {
       if (this.TaakNaam !== "") {
         const taak = {
+          // in welke lijst moet de taak geplaatst worden
           listId: this.listId,
-          name: this.TaakNaam,
+          // de ingevoerde naam toevoegen aan de taak
+          naam: this.TaakNaam,
         };
         this.$store.dispatch("maakTaak", taak);
         this.TaakNaam = "";

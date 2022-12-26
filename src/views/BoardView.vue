@@ -60,7 +60,7 @@ export default {
   },
   data() {
     return {
-      listName: "",
+      listName: null,
     };
   },
   methods: {
@@ -69,7 +69,7 @@ export default {
       if (this.listName !== "") {
         this.$store.dispatch("createList", this.listName);
         // terug leeg zetten van het inputveld
-        this.listName = "";
+        this.listName = null;
       }
     },
   },
