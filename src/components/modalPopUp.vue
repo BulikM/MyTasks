@@ -6,7 +6,10 @@
       <h1>List Name : {{ currentData.listName }}</h1>
       <!--      de huidige taaknaam in het inputveld-->
       <input :placeholder="currentData.naam" v-model="taakNaam" />
-      <check-list />
+      <div class="bg-pink py-1">
+        <check-list />
+      </div>
+
       <!--      de save en verwijder knoppen-->
       <div class="d-flex gap-3">
         <button class="btn p-3 btn-dark rounded-0" @click="saveElement">
@@ -34,6 +37,9 @@ export default {
   },
   computed: {
     ...mapGetters(["overlay", "currentData"]),
+    lists() {
+      return this.$store.getters["lists"];
+    },
   },
   methods: {
     // naam van taak aanpassen
