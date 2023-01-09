@@ -1,6 +1,12 @@
 <template>
   <!--  verslepen van de taken-->
-
+  <input
+    type="text"
+    class="input-new-checklistItem bg-pink"
+    placeholder="maak een omschrijving aan"
+    v-model="checklistItemNaam"
+    @keyup.enter="maakNewChecklistItem"
+  />
   <draggable
     :options="{ group: 'checklistItem' }"
     group="checklistItem"
@@ -27,10 +33,23 @@ export default {
   components: {
     draggable: VueDraggableNext,
   },
+  data() {
+    return {
+      checklistItemNaam: null,
+    };
+  },
   computed: {
     checklistItem() {
       return this.$store.getters["checklistItem"];
     },
+  },
+  maakNewChecklistItem() {
+    // maken dat de waarde niet leeg is
+    if (this.checklistItemNaam !== "") {
+      this.$store.dispatch("checklistItem", this.checklistItemNaam);
+      // terug leeg zetten van het inputveld
+      this.checklistItemNaam = null;
+    }
   },
 };
 </script>

@@ -7,6 +7,9 @@ export default {
     console.log("lastTaakId", state.lastTaakId);
     return state.lastTaakId;
   },
+  lastCheckId(state) {
+    return state.lastCheckId;
+  },
   lists(state) {
     return state.lists;
   },

@@ -31,6 +31,12 @@ const store = createStore({
           taakId: 1,
           naam: "check 1",
         },
+        {
+          id: 2,
+          listId: 1,
+          taakId: 1,
+          naam: "check 2",
+        },
       ],
     };
   },

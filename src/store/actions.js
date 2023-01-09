@@ -22,4 +22,7 @@ export default {
   deleteTaak(context, payload) {
     context.commit("deleteTaak", payload);
   },
+  maakNewChecklistItem(context, payload) {
+    context.commit("maakNewChecklistItem", payload);
+  },
 };
