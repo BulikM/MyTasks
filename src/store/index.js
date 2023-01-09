@@ -7,21 +7,13 @@ const store = createStore({
   state() {
     return {
       overlay: false,
-      lastListId: 3,
-      lastTaakId: 3,
+      lastListId: 1,
+      lastTaakId: 1,
       currentData: null,
       lists: [
         {
           id: 1,
           name: "list #1",
-        },
-        {
-          id: 2,
-          name: "list #2",
-        },
-        {
-          id: 3,
-          name: "list #3",
         },
       ],
       taken: [
@@ -29,16 +21,6 @@ const store = createStore({
           listId: 1,
           id: 1,
           naam: "taak 1",
-        },
-        {
-          listId: 2,
-          id: 2,
-          naam: "taak 2",
-        },
-        {
-          listId: 3,
-          id: 3,
-          naam: "taak 3",
         },
       ],
     };

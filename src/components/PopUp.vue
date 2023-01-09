@@ -1,11 +1,19 @@
 <template>
   <transition>
+    <!--    modal zelf-->
     <div v-if="overlay" class="modal">
+      <!--      titel van de lijst = lijst van de aangeduide taak-->
       <h1>List Name : {{ currentData.listName }}</h1>
+      <!--      de huidige taaknaam in het inputveld-->
       <input :placeholder="currentData.naam" v-model="taakNaam" />
-      <div class="container-button">
-        <button class="blue" @click="saveElement">save</button>
-        <button class="red" @click="deleteElement">delete</button>
+      <!--      de save en verwijder knoppen-->
+      <div class="d-flex gap-3">
+        <button class="btn p-3 btn-dark rounded-0" @click="saveElement">
+          save
+        </button>
+        <button class="btn p-3 btn-danger rounded-0" @click="deleteElement">
+          delete
+        </button>
       </div>
     </div>
   </transition>
@@ -93,45 +101,5 @@ input {
   height: 50px;
   padding: 10px 20px 10px 20px;
   border: 1px solid rgba(60, 60, 60, 0.2);
-  border-radius: 15px;
-}
-
-button {
-  display: flex;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 15px;
-  cursor: pointer;
-  transition-duration: 0.4s;
-}
-
-button:hover {
-  color: white;
-}
-
-.blue {
-  background-color: rgba(1, 100, 255, 1);
-}
-
-.blue:hover {
-  background-color: rgba(1, 100, 255, 0.8);
-}
-
-.red {
-  background-color: rgba(250, 52, 75, 1);
-}
-.red:hover {
-  background-color: rgba(250, 52, 75, 0.8);
-}
-
-.container-button {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
 }
 </style>

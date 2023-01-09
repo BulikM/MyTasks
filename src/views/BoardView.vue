@@ -14,13 +14,16 @@
         >
           <!--          v-bind van de lijst en de items in deze lijst-->
           <div class="px-2" v-for="(list, index) in lists" :key="index">
-            <label class="list-header bg-pink p-1">{{ list.name }}</label>
+            <div class="bg-pink d-flex justify-content-between p-2">
+              <label class="list-header bg-pink p-1">{{ list.name }}</label
+              ><button class="btn btn-danger rounded-0">weg</button>
+            </div>
             <!--            achtergrond taak+ extra ruimte voor slepen als de lijst leeg is-->
             <div class="bg-pink py-1">
               <CardsList :listId="list.id" :listName="list.name" />
             </div>
             <!--            rand rond maak taak aan-->
-            <div class="bg-pink w-100 d-flex justify-content-center p-2">
+            <div class="bg-pink w-100 text-center p-2">
               <!--              taak aanmaken via -->
               <taak :listId="list.id" />
             </div>
@@ -28,7 +31,7 @@
         </draggable>
         <input
           type="text"
-          class="input-new-list bg-pink col"
+          class="input-new-list bg-pink"
           placeholder="maak een lijst aan"
           v-model="listName"
           @keyup.enter="maakLijst"
@@ -84,7 +87,7 @@ export default {
 <style>
 .list-wrapper {
   box-sizing: border-box;
-  min-width: 100vw;
+  width: 280px;
   height: 80vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -108,7 +111,6 @@ export default {
 /*naam van de lijst*/
 .list-header {
   text-overflow: ellipsis;
-  width: 280px;
   line-height: 50px;
   /*user-select: ;*/
 }

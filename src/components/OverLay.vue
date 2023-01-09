@@ -3,7 +3,7 @@
     <div v-if="overlayIsActive" class="overlay" @click="closeOverlay"></div>
   </transition>
 </template>
-
+<!--aanspreken + sluiten bij klikken naast modal-->
 <script>
 export default {
   methods: {

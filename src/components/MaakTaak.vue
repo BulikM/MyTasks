@@ -32,4 +32,3 @@ export default {
   },
 };
 </script>
-<!--npm install vue-draggable-next-->
