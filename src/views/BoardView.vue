@@ -16,7 +16,9 @@
           <div class="px-2" v-for="(list, index) in lists" :key="index">
             <div class="bg-pink d-flex justify-content-between p-2">
               <label class="list-header bg-pink p-1">{{ list.name }}</label
-              ><button class="btn btn-danger rounded-0">weg</button>
+              ><button class="btn btn-danger rounded-0" @click="deleteList">
+                weg
+              </button>
             </div>
             <!--            achtergrond taak+ extra ruimte voor slepen als de lijst leeg is-->
             <div class="bg-pink py-1">
@@ -74,6 +76,9 @@ export default {
         // terug leeg zetten van het inputveld
         this.listName = null;
       }
+    },
+    deleteList() {
+      this.$store.dispatch("deleteList", this.currentData);
     },
   },
   computed: {

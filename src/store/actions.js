@@ -2,6 +2,9 @@ export default {
   createList(context, payload) {
     context.commit("createNewList", payload);
   },
+  deleteList(context, payload) {
+    context.commit("deleteList", payload);
+  },
   // nieuwe taak toevoegen
   // de payload is om het volledige object over te dragen in vue
   maakTaak(context, payload) {
