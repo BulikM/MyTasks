@@ -44,6 +44,7 @@ export default {
     },
   },
   maakNewChecklistItem() {
+    console.log("test");
     // maken dat de waarde niet leeg is
     if (this.checklistItemNaam !== "") {
       this.$store.dispatch("checklistItem", this.checklistItemNaam);
