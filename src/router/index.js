@@ -4,7 +4,7 @@ import boardView from "@/views/BoardView";
 const routes = [
   {
     path: "/",
-    name: "home",
+    name: "board",
     component: boardView,
   },
 ];

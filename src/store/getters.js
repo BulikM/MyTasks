@@ -20,4 +20,8 @@ export default {
   currentData(state) {
     return state.currentData;
   },
+  checklistItem(state) {
+    console.log("check", state.checklistItem);
+    return state.checklistItem;
+  },
 };

@@ -1,18 +1,11 @@
 <template>
   <nav>
-    <router-link to="/board">Board</router-link>
+    <router-link to="/">Board</router-link>
   </nav>
   <router-view />
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: rgb(217, 67, 152);
-}
 nav {
   padding: 30px;
 }

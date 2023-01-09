@@ -53,8 +53,7 @@ import taak from "@/components/MaakTaak.vue";
 
 import Overlay from "@/components/OverLay";
 // modal om de taak aan te passen
-import Popup from "@/components/PopUp";
-
+import Popup from "@/components/modalPopUp";
 export default {
   components: {
     draggable: VueDraggableNext,

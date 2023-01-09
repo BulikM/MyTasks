@@ -6,6 +6,7 @@
       <h1>List Name : {{ currentData.listName }}</h1>
       <!--      de huidige taaknaam in het inputveld-->
       <input :placeholder="currentData.naam" v-model="taakNaam" />
+      <check-list />
       <!--      de save en verwijder knoppen-->
       <div class="d-flex gap-3">
         <button class="btn p-3 btn-dark rounded-0" @click="saveElement">
@@ -21,8 +22,11 @@
 
 <script>
 import { mapGetters } from "vuex";
+import CheckList from "@/components/checkList";
 
 export default {
+  components: { CheckList },
+  // components: { Check },
   data() {
     return {
       taakNaam: null,

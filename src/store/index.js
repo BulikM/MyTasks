@@ -9,6 +9,7 @@ const store = createStore({
       overlay: false,
       lastListId: 1,
       lastTaakId: 1,
+      lastCheckId: 1,
       currentData: null,
       lists: [
         {
@@ -21,6 +22,14 @@ const store = createStore({
           listId: 1,
           id: 1,
           naam: "taak 1",
+        },
+      ],
+      checklistItem: [
+        {
+          checkId: 1,
+          listId: 1,
+          taakId: 1,
+          naam: "check 1",
         },
       ],
     };
