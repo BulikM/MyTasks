@@ -2,13 +2,9 @@
   <transition>
     <!--    modal zelf-->
     <div v-if="overlay" class="modal">
-      <!--      titel van de lijst = lijst van de aangeduide taak-->
-      <h1>List Name : {{ currentData.listName }}</h1>
       <!--      de huidige taaknaam in het inputveld-->
       <input :placeholder="currentData.naam" v-model="taakNaam" />
-      <div class="bg-pink py-1">
-        <check-list />
-      </div>
+      <div class="bg-pink py-1"></div>
 
       <!--      de save en verwijder knoppen-->
       <div class="d-flex gap-3">
@@ -25,11 +21,8 @@
 
 <script>
 import { mapGetters } from "vuex";
-import CheckList from "@/components/checkList";
 
 export default {
-  components: { CheckList },
-  // components: { Check },
   data() {
     return {
       taakNaam: null,

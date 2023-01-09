@@ -24,20 +24,6 @@ const store = createStore({
           naam: "taak 1",
         },
       ],
-      checklistItem: [
-        {
-          id: 1,
-          listId: 1,
-          taakId: 1,
-          naam: "check 1",
-        },
-        {
-          id: 2,
-          listId: 1,
-          taakId: 1,
-          naam: "check 2",
-        },
-      ],
     };
   },
   mutations: rootMutations,

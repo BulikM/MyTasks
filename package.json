@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "cli": "^1.0.1",
     "core-js": "^3.8.3",
     "lint": "^0.8.19",
     "vue": "^3.2.13",
