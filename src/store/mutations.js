@@ -9,12 +9,6 @@ export default {
     };
     state.lists.push(list);
   },
-  deleteList(state, payload) {
-    const list = {
-      name: payload,
-    };
-    state.lists.pop(list);
-  },
   // taak een id geven
   maakTaak(state, payload) {
     // de vorige id +1 voor de nieuwe id

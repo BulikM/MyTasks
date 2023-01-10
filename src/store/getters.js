@@ -4,13 +4,10 @@ export default {
   },
   // het bijhouden van de laatste taak Id zodat deze kan worden gebruikt voor de volgende en in verschillende componenten
   lastTaakId(state) {
-    console.log("lastTaakId", state.lastTaakId);
     return state.lastTaakId;
   },
-  lastCheckId(state) {
-    return state.lastCheckId;
-  },
   lists(state) {
+    console.log("lists", state.lists);
     return state.lists;
   },
   taken(state) {
@@ -22,9 +19,5 @@ export default {
   },
   currentData(state) {
     return state.currentData;
-  },
-  checklistItem(state) {
-    console.log("check", state.checklistItem);
-    return state.checklistItem;
   },
 };

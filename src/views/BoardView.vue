@@ -11,12 +11,18 @@
           group="lists"
           ghostClass="ghost"
           class="d-flex"
+          handle=".handle"
         >
           <!--          v-bind van de lijst en de items in deze lijst-->
           <div class="px-2" v-for="(list, index) in lists" :key="index">
-            <div class="bg-pink d-flex justify-content-between p-2">
+            <div class="bg-pink d-flex flex-wrap justify-content-between p-2">
+              <!--              sleep balkje ipv op het hele object dankzij Milan-->
+              <div class="w-100 handle bg-dark mb-2">sleep</div>
               <label class="list-header bg-pink p-1">{{ list.name }}</label
-              ><button class="btn btn-danger rounded-0" @click="deleteList">
+              ><button
+                class="btn btn-danger rounded-0"
+                @click="this.deleteList(index)"
+              >
                 weg
               </button>
             </div>
@@ -76,8 +82,8 @@ export default {
         this.listName = null;
       }
     },
-    deleteList() {
-      this.$store.dispatch("deleteList", this.currentData);
+    deleteList(index) {
+      this.lists.splice(index, 1);
     },
   },
   computed: {
