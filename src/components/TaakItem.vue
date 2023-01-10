@@ -4,14 +4,25 @@
     <!-- taken in de lijst-->
     <!--  togglePopup    modal voor het verwijderen van de taak-->
     <!--      weergave van de taak naam-->
-    <span
-      class="bg-light p-3 m-2 d-flex"
-      v-for="(taak, index) in taken"
-      :key="index"
-      @click="togglePopup(taak)"
-    >
+    <div class="bg-light p-3 m-2" v-for="(taak, index) in taken" :key="index">
+      <button class="btn-info btn m-3" @click="togglePopup(taak)">modal</button>
       {{ taak.naam }}
-    </span>
+      <!--      subtaak-->
+      <div
+        class="bg-light p-3 m-2 d-flex align-items-center"
+        v-for="(check, index) in taken[0].checklist"
+        :key="index"
+      >
+        <input
+          class="form-check-input m-3"
+          type="checkbox"
+          value=""
+          aria-label="Checkbox for following text input"
+        />
+
+        {{ check.naam }}
+      </div>
+    </div>
   </draggable>
 </template>
 

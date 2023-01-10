@@ -53,7 +53,7 @@
 // vue draggeble
 import { VueDraggableNext } from "vue-draggable-next";
 // taak
-import CardsList from "@/components/CardList";
+import CardsList from "@/components/TaakItem";
 // invulveld om taak aan te maken
 import taak from "@/components/MaakTaak.vue";
 

@@ -21,7 +21,17 @@ const store = createStore({
         {
           listId: 1,
           id: 1,
-          naam: "taak 1",
+          naam: "taak1",
+          checklist: [
+            {
+              id: 1,
+              naam: "subTaak 1",
+            },
+            {
+              id: 2,
+              naam: "subTaak 2",
+            },
+          ],
         },
       ],
     };
