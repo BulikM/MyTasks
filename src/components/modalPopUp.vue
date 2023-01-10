@@ -2,6 +2,7 @@
   <transition>
     <!--    modal zelf-->
     <div v-if="overlay" class="modal">
+      <h1>Wijzig uw taak:</h1>
       <!--      de huidige taaknaam in het inputveld-->
       <input :placeholder="currentData.naam" v-model="taakNaam" />
       <div class="bg-pink py-1"></div>

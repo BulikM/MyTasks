@@ -48,14 +48,4 @@ export default {
 
     state.taken.splice(indexToDelete, 1);
   },
-  maakNewChecklistItem(state, payload) {
-    // de vorige id +1 voor de nieuwe id
-    state.lastCheckId++;
-    const check = {
-      checkId: payload.checkId,
-      id: state.lastCheckId,
-      naam: payload.naam,
-    };
-    state.checklistItem.push(check);
-  },
 };
